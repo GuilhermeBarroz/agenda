@@ -22,8 +22,7 @@ public class Agendamento {
     @Column(nullable = false)
     private Time hora_fim;
 
-    @Column(nullable = false, length = 250)
-    private String nome_usario;
+
 
     public Long getID_Agendamento() {
         return ID_Agendamento;
@@ -57,11 +56,5 @@ public class Agendamento {
         this.hora_fim = hora_fim;
     }
 
-    public String getNome_usario() {
-        return nome_usario;
-    }
 
-    public void setNome_usario(String nome_usario) {
-        this.nome_usario = nome_usario;
-    }
 }

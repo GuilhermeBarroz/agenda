@@ -1,5 +1,6 @@
 package com.restapi.agenda.Controller;
 
+import com.restapi.agenda.Entidade.Cadastro;
 import com.restapi.agenda.Entidade.Usuario;
 import com.restapi.agenda.database.RepositorioUsuario;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,11 +11,12 @@ import java.util.List;
 @RestController
 @RequestMapping("/usuario")
 public class UsuarioRest {
+
     @Autowired
     private RepositorioUsuario repositorioUsuario;
 
     @GetMapping
-    public List<Usuario>listar(){
+    public List<Usuario> listar(){
         return repositorioUsuario.findAll();
     }
 
@@ -32,4 +34,5 @@ public class UsuarioRest {
     public void excluir(@RequestBody Usuario usuario){
         repositorioUsuario.delete(usuario);
     }
+
 }
