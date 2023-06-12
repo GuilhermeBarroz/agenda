@@ -11,7 +11,7 @@ public class Agendamento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID_Agendamento;
+    private Long id;
 
     @Column(nullable = false)
     private Date data;
@@ -23,13 +23,12 @@ public class Agendamento {
     private Time hora_fim;
 
 
-
     public Long getID_Agendamento() {
-        return ID_Agendamento;
+        return id;
     }
 
     public void setID_Agendamento(Long ID_Agendamento) {
-        this.ID_Agendamento = ID_Agendamento;
+        this.id = ID_Agendamento;
     }
 
     public Date getData() {
