@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Cadastro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID_Matricula;
+    private Long id_matricula;
     @Column(nullable = false, length = 250)
     private String nome_usuario;
     @Column(nullable = false, length = 250, unique = true)
@@ -17,11 +17,11 @@ public class Cadastro {
 
 
     public Long getIdMatricula() {
-        return ID_Matricula;
+        return id_matricula;
     }
 
     public void setIdMatricula(Long idMatricula) {
-        ID_Matricula = idMatricula;
+        id_matricula = idMatricula;
     }
 
     public String getNome() {
