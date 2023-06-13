@@ -11,9 +11,9 @@ public class Cadastro {
     @Column(nullable = false, length = 250)
     private String nome_usuario;
     @Column(nullable = false, length = 250, unique = true)
-    private String email;
+    private String email_usuario;
     @Column(nullable = false, length = 50)
-    private String senha;
+    private String senha_usuario;
 
 
     public Long getIdMatricula() {
@@ -33,18 +33,18 @@ public class Cadastro {
     }
 
     public String getEmail() {
-        return email;
+        return email_usuario;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email_usuario = email;
     }
 
     public String getSenha() {
-        return senha;
+        return senha_usuario;
     }
 
     public void setSenha(String senha) {
-        this.senha = senha;
+        this.senha_usuario = senha;
     }
 }
